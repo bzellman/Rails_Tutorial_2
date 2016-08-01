@@ -1,0 +1,4 @@
+steve:
+    name: Steve Atlas
+    email: steve@atlas.net
+    password_digest: <%= User.digest('foobarbarz') %>
