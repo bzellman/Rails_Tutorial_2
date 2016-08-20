@@ -75,7 +75,7 @@ Rails.application.configure do
   # require 'syslog/logger'
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
 
-  ##Mailer
+
     config.action_mailer.raise_delivery_errors = true
     config.action_mailer.delivery_method = :smtp
     host = 'honest-inuksuk-26212.herokuapp.com'
@@ -84,7 +84,7 @@ Rails.application.configure do
       :address        => 'smtp.sendgrid.net',
       :port           => '587',
       :authentication => :plain,
-      :user_name      => ENV['app53017829@heroku.com'],
+      :user_name      => ENV['SENDGRID_USERNAME'],
       :password       => ENV['SENDGRID_PASSWORD'],
       :domain         => 'heroku.com',
       :enable_starttls_auto => true
